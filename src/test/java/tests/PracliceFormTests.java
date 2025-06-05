@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -28,7 +29,7 @@ public class PracliceFormTests {
         $("#gender-radio-2+label").click();
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").selectOption("1993");
+        $(".react-datepicker__year-select").shouldBe(visible).selectOption("1993");
         $(".react-datepicker__month-select").selectOption("July");
         $(".react-datepicker__day--008").click();
         $("#subjectsInput").setValue("English").pressEnter();

@@ -46,7 +46,7 @@ public class PracticeFormPage extends TestBase {
         userEmailInput.setValue(value);
         return this;
     }
-    public PracticeFormPage setGender() {
+    public PracticeFormPage setGender(String gender) {
         genderWrapper.click();
         return this;
     }
@@ -68,8 +68,8 @@ public class PracticeFormPage extends TestBase {
         hobbiesCheckbox.click();
         return this;
     }
-    public PracticeFormPage selectUploadPicture() {
-        uploadPicture.uploadFromClasspath("cat.jpg");
+    public PracticeFormPage selectUploadPicture(String value) {
+        uploadPicture.uploadFromClasspath(value);
         return this;
     }
     public PracticeFormPage setCurrentAddress(String value) {
